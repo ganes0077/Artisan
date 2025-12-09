@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Stories | Artisan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Stories Layout */
+        .story-card .card-img-wrap {
+            aspect-ratio: 16/10; /* Wider image for story previews */
+        }
+        .story-card .card-info h3 {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html">ARTISAN.</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="stories.html">Stories</a>
+        </div>
+        <div class="nav-actions">
+            <a href="cart.html">Cart</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </nav>
+
+    <div class="section" style="padding-top: 15vh; padding-bottom: 2rem;">
+        <h1 class="section-title" data-anim="fade-up" style="font-size: 4rem;">The Stories Behind the Craft</h1>
+        <p data-anim="fade-up" style="max-width: 700px; margin-top: 1rem;">Go beyond the product. Read about the history, heritage, and hands that bring these global traditions to life.</p>
+    </div>
+
+    <div class="section" style="padding-top: 0;">
+        
+        <div class="grid-3">
+            
+            <a href="story-kyoto.html" class="card story-card" data-anim="fade-up">
+                <div class="card-img-wrap">
+                    <img src="/images/kyoto-stories.jpeg" alt="Kyoto Weaver" class="card-img">
+                </div>
+                <div class="card-info">
+                    <div class="card-meta"><span>FEATURED ARTISAN</span></div>
+                    <h3>The Hands of Kyoto: Preserving 500 Years of Silk</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted);">Meet Kenji, the master weaver committed to the ancient Nishijin-ori technique.</p>
+                </div>
+            </a>
+            
+            <a href="story-morocco.html" class="card story-card" data-anim="fade-up" style="transition-delay: 0.1s;">
+                <div class="card-img-wrap">
+                    <img src="/images/ceramicmorocon.jpeg" alt="Moroccan Ceramics" class="card-img">
+                </div>
+                <div class="card-info">
+                    <div class="card-meta"><span>HISTORY</span></div>
+                    <h3>The Azulejo Trail: Tracing the Vibrant History of Moroccan Tile</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted);">How geometry, color, and clay built the great cities of North Africa.</p>
+                </div>
+            </a>
+
+            <a href="story-scandiwood.html" class="card story-card" data-anim="fade-up" style="transition-delay: 0.2s;">
+                <div class="card-img-wrap">
+                    <img src="/images/scandi-wood.jpeg" alt="Scandi Wood" class="card-img">
+                </div>
+                <div class="card-info">
+                    <div class="card-meta"><span>SUSTAINABILITY</span></div>
+                    <h3>Slow Living: The Sustainable Beauty of Nordic Wood Carving</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted);">Examining the philosophy of craft in the minimalist Scandinavian tradition.</p>
+                </div>
+            </a>
+
+            <a href="story-indigo.html" class="card story-card" data-anim="fade-up">
+                <div class="card-img-wrap">
+                    <img src="/images/indigo-dye.jpeg" alt="Indigo Dye" class="card-img">
+                </div>
+                <div class="card-info">
+                    <div class="card-meta"><span>PROCESS</span></div>
+                    <h3>The Deep Blue: The Complex Alchemy of Natural Indigo Dye</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted);">From leaf to luxurious hue, the ancient process that creates a perfect blue.</p>
+                </div>
+            </a>
+
+            <a href="story-silver.html" class="card story-card" data-anim="fade-up" style="transition-delay: 0.1s;">
+                <div class="card-img-wrap">
+                    <img src="/images/mexican-jwelve.jpg" alt="Silver Work" class="card-img">
+                </div>
+                <div class="card-info">
+                    <div class="card-meta"><span>PROFILE</span></div>
+                    <h3>The Silversmiths of Taxco: A New Generation of Mexican Jewelry</h3>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted);">How one town keeps the heritage of precious metalwork alive today.</p>
+                </div>
+            </a>
+
+            </div>
+
+    </div>
+    
+    <footer>
+        <div><div class="logo">ARTISAN.</div></div>
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

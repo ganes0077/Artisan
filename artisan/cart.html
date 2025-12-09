@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Artisan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page Specific Styles */
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        @media(max-width: 768px) { .cart-layout { grid-template-columns: 1fr; } }
+
+        .cart-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .cart-img { width: 100px; height: 120px; border-radius: 4px; object-fit: cover; }
+        
+        .item-details h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .item-price { font-weight: 700; color: var(--accent); margin-bottom: 1rem; display: block; }
+        
+        .qty-control {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+        .qty-btn { padding: 5px 15px; cursor: pointer; user-select: none; }
+        .qty-val { padding: 5px 10px; border-left: 1px solid rgba(0,0,0,0.1); border-right: 1px solid rgba(0,0,0,0.1); }
+        
+        .remove-btn { 
+            display: block; margin-top: 1rem; font-size: 0.8rem; text-decoration: underline; cursor: pointer; color: var(--text-muted); 
+        }
+
+        .summary-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 100px;
+        }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.95rem; }
+        .summary-total { border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem; margin-top: 1rem; font-weight: 700; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html">ARTISAN.</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="workshops.html">Workshops</a>
+        </div>
+        <div class="nav-actions">
+            <a href="cart.html" style="font-weight: 700;">Cart (2)</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </nav>
+
+    <div class="section" style="padding-top: 15vh;">
+        <h1 class="section-title" data-anim="fade-up" style="margin-bottom: 2rem;">Your Cart</h1>
+
+        <div class="cart-layout">
+            
+            <div class="cart-list" data-anim="fade-up">
+                
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80" class="cart-img" alt="Ceramic Vase">
+                    <div class="item-details">
+                        <h3>Kyoto Ceramic Vase</h3>
+                        <span class="item-price">$85.00</span>
+                        <div class="qty-control">
+                            <span class="qty-btn">-</span>
+                            <span class="qty-val">1</span>
+                            <span class="qty-btn">+</span>
+                        </div>
+                        <span class="remove-btn">Remove</span>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="/images/hand-woven-cart-item.webp" class="cart-img" alt="Linen Throw">
+                    <div class="item-details">
+                        <h3>Handwoven Linen Throw</h3>
+                        <span class="item-price">$120.00</span>
+                        <div class="qty-control">
+                            <span class="qty-btn">-</span>
+                            <span class="qty-val">1</span>
+                            <span class="qty-btn">+</span>
+                        </div>
+                        <span class="remove-btn">Remove</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="summary-card" data-anim="fade-up">
+                <h3 style="margin-bottom: 1.5rem;">Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$205.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span>$205.00</span>
+                </div>
+                <button class="btn" style="width: 100%; background: var(--primary); color: #fff; margin-top: 2rem;">Checkout</button>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">Secure Checkout via Stripe</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

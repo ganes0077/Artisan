@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Artisan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Profile Dashboard Layout */
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 4rem;
+            min-height: 60vh;
+        }
+        @media(max-width: 768px) { .dashboard-container { grid-template-columns: 1fr; } }
+
+        /* Sidebar */
+        .sidebar-menu li { margin-bottom: 1rem; }
+        .sidebar-menu a { 
+            display: block; 
+            padding: 10px 0; 
+            font-size: 1.1rem; 
+            color: var(--text-muted);
+            transition: 0.3s;
+        }
+        .sidebar-menu a.active, .sidebar-menu a:hover { color: var(--primary); font-weight: 700; border-right: 2px solid var(--accent); }
+
+        /* User Info Header */
+        .user-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .user-avatar {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Order Table */
+        .order-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .order-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .order-header { display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); }
+        .order-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: #e3f2fd;
+            color: #1565c0;
+            font-weight: 600;
+        }
+        .status-shipped { background: #e8f5e9; color: #2e7d32; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html">ARTISAN.</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+        </div>
+        <div class="nav-actions">
+            <a href="cart.html">Cart (0)</a>
+            <a href="index.html" class="btn">Logout</a> </div>
+    </nav>
+
+    <div class="section" style="padding-top: 15vh;">
+        
+        <div class="dashboard-container">
+            
+            <aside data-anim="fade-up">
+                <h3 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif;">Account</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active">My Orders</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Addresses</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="register-artisan.html">Become a Seller</a></li>
+                </ul>
+            </aside>
+
+            <main>
+                <div class="user-header" data-anim="fade-up">
+                    <div class="user-avatar">A</div>
+                    <div>
+                        <h2 style="font-size: 2rem;">Alex Johnson</h2>
+                        <p style="color: var(--text-muted);">Member since 2023</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem;">Recent Orders</h3>
+
+                <div class="order-list">
+                    
+                    <div class="order-card" data-anim="fade-up">
+                        <div class="order-header">
+                            <span>Order #88392</span>
+                            <span>Oct 24, 2023</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="font-size: 1.1rem;">Abstract Pottery Vase x 1</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">$120.00</span>
+                            </div>
+                            <span class="order-status status-shipped">Shipped</span>
+                        </div>
+                    </div>
+
+                    <div class="order-card" data-anim="fade-up">
+                        <div class="order-header">
+                            <span>Order #88102</span>
+                            <span>Sep 12, 2023</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="font-size: 1.1rem;">Oak Wood Carving Set x 1</h4>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">$85.00</span>
+                            </div>
+                            <span class="order-status">Processing</span>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

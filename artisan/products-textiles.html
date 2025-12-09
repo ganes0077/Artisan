@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaving & Textiles | Artisan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html">ARTISAN.</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="stories.html">Stories</a>
+        </div>
+        <div class="nav-actions">
+            <a href="cart.html">Cart</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </nav>
+
+    <div class="section" style="padding-top: 15vh; padding-bottom: 2rem;">
+        <h1 class="section-title" data-anim="fade-up" style="font-size: 4rem;">Weaving & Textiles</h1>
+        
+        <div data-anim="fade-up" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1rem;">
+            <p style="color: var(--text-muted);">Showing 1 - 12 of 85 Products</p>
+            <div class="sort-options">
+                <label for="sort" style="font-size: 0.9rem;">Sort by:</label>
+                <select id="sort" style="padding: 0.5rem; border: 1px solid var(--text-muted); background: transparent;">
+                    <option value="featured">Featured</option>
+                    <option value="newest">Newest Arrivals</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top: 0;">
+        
+        <div class="grid-3">
+            
+            <a href="product-detail.html" class="card" data-anim="fade-up">
+                <div class="card-img-wrap">
+                    <img src="/images/morocon-rugs.jpg" alt="Hand-woven Rug" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Moroccan Hand-Woven Wool Rug</h3>
+                    <div class="card-meta"><span>$349.00</span><span style="color: var(--accent);">In Stock</span></div>
+                </div>
+            </a>
+            
+            <a href="product-detail.html" class="card" data-anim="fade-up" style="transition-delay: 0.1s;">
+                <div class="card-img-wrap">
+                    <img src="/images/pillows.jpg" alt="Shibori Cushion Cover" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Set of 2 Indigo Shibori Covers</h3>
+                    <div class="card-meta"><span>$75.00</span><span style="color: var(--accent);">New</span></div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="card" data-anim="fade-up" style="transition-delay: 0.2s;">
+                <div class="card-img-wrap">
+                    <img src="/images/throw.jpg" alt="Linen Throw" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Natural Linen Summer Throw</h3>
+                    <div class="card-meta"><span>$110.00</span><span>By Weaving Guild</span></div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="card" data-anim="fade-up">
+                <div class="card-img-wrap">
+                    <img src="/images/wall-art.jpg" alt="Macrame Wall Hanging" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Boho Macrame Wall Art</h3>
+                    <div class="card-meta"><span>$59.00</span><span>Limited Stock</span></div>
+                </div>
+            </a>
+            
+            <a href="product-detail.html" class="card" data-anim="fade-up" style="transition-delay: 0.1s;">
+                <div class="card-img-wrap">
+                    <img src="/images/table-runner.jpg" alt="Table Runner" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Indian Block Print Runner</h3>
+                    <div class="card-meta"><span>$45.00</span><span>Quick Ship</span></div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="card" data-anim="fade-up" style="transition-delay: 0.2s;">
+                <div class="card-img-wrap">
+                    <img src="/images/scarf.jpg" alt="Scarf" class="card-img">
+                </div>
+                <div class="card-info">
+                    <h3>Peruvian Alpaca Wool Scarf</h3>
+                    <div class="card-meta"><span>$120.00</span><span>High Demand</span></div>
+                </div>
+            </a>
+
+            </div>
+
+        <div style="text-align: center; margin-top: 4rem;" data-anim="fade-up">
+            <a href="#" class="btn" style="border: 2px solid var(--primary); padding: 1rem 3rem;">Load More Products</a>
+        </div>
+
+    </div>
+    
+    <footer>
+        <div><div class="logo">ARTISAN.</div></div>
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

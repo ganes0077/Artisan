@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join as Artisan | Artisan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Registration Form Styles */
+        .split-screen {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+        }
+        @media(max-width: 900px) { .split-screen { grid-template-columns: 1fr; } }
+        
+        .image-side {
+            background-image: url('https://images.unsplash.com/photo-1598337583492-c4819779df5e?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+        @media(max-width: 900px) { .image-side { height: 300px; position: relative; } }
+
+        .form-side {
+            padding: 8rem 10%;
+            background: var(--secondary);
+        }
+
+        select {
+            width: 100%; padding: 1rem;
+            background: transparent; border: 1px solid rgba(0,0,0,0.2);
+            font-family: inherit; font-size: 1rem; color: var(--primary);
+            appearance: none; /* Removes default arrow */
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .file-upload {
+            border: 2px dashed rgba(0,0,0,0.2);
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .file-upload:hover { border-color: var(--primary); background: rgba(0,0,0,0.02); }
+    </style>
+</head>
+<body>
+
+    <nav style="position: absolute;">
+        <div class="logo"><a href="index.html">ARTISAN.</a></div>
+        <div></div> <a href="login.html" style="font-size: 0.9rem; text-decoration: underline;">Already have an account?</a>
+    </nav>
+
+    <div class="split-screen">
+        
+        <div class="image-side"></div>
+
+        <div class="form-side">
+            <h1 class="section-title" data-anim="fade-up" style="margin-bottom: 1rem;">Join the Collective</h1>
+            <p data-anim="fade-up" style="margin-bottom: 3rem; color: var(--text-muted);">Share your craft with the world. Apply to become a verified artisan seller.</p>
+
+            <form>
+                <h4 style="margin-bottom: 1.5rem; text-decoration: underline;">01. Personal Information</h4>
+                
+                <div class="input-group" data-anim="fade-up">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="e.g. Sarah Jenkins">
+                </div>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="sarah@example.com">
+                </div>
+
+                <h4 style="margin: 3rem 0 1.5rem 0; text-decoration: underline;">02. Your Craft</h4>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Brand Name</label>
+                    <input type="text" placeholder="e.g. Sarah Ceramics">
+                </div>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Primary Category</label>
+                    <select>
+                        <option value="">Select a category...</option>
+                        <option value="ceramics">Ceramics & Pottery</option>
+                        <option value="textiles">Textiles & Weaving</option>
+                        <option value="wood">Woodwork</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="painting">Fine Art & Painting</option>
+                    </select>
+                </div>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Your Story (Bio)</label>
+                    <textarea rows="5" placeholder="Tell us about your history, materials, and process..."></textarea>
+                </div>
+
+                <h4 style="margin: 3rem 0 1.5rem 0; text-decoration: underline;">03. Portfolio</h4>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Portfolio / Instagram URL</label>
+                    <input type="url" placeholder="https://instagram.com/yourhandle">
+                </div>
+
+                <div class="input-group" data-anim="fade-up">
+                    <label>Upload Sample Images (Max 5)</label>
+                    <div class="file-upload">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">+</span>
+                        <p>Drag & Drop or Click to Upload</p>
+                    </div>
+                </div>
+
+                <button type="button" class="btn" style="width: 100%; margin-top: 2rem; background: var(--primary); color: #fff;">Submit Application</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
